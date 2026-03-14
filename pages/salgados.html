@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Salgados | Confeitaria Pierotti Encomendas</title>
+    <meta name="description" content="Confira nossa seleção de salgados artesanais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/doces.css">
+    <link rel="stylesheet" href="../css/salgados.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">Confeitaria Pierotti Encomendas</a>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu">
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+            </button>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="/" class="navbar-link">Início</a>
+                <div class="menu-cardapio" id="menu-cardapio">
+                    <a href="/#cardapio" class="navbar-link navbar-link--has-submenu" id="cardapio-trigger">Doces</a>
+                    <ul class="submenu" id="submenu-cardapio">
+                        <li><a href="doces.html" class="submenu-link">Tradicionais</a></li>
+                        <li><a href="gourmet.html" class="submenu-link">Gourmet</a></li>
+                        <li><a href="bombons-tradicionais.html" class="submenu-link">Bombons Tradicionais</a></li>
+                        <li><a href="bombons-finos.html" class="submenu-link">Bombons Finos</a></li>
+                        <li><a href="bombons-gourmet.html" class="submenu-link">Bombons Gourmet</a></li>
+                    </ul>
+                </div>
+                <div class="menu-cardapio" id="menu-bolos">
+                    <a href="/#bolos" class="navbar-link navbar-link--has-submenu" id="bolos-trigger">Bolos</a>
+                    <ul class="submenu" id="submenu-bolos">
+                        <li><a href="bolos-kit-kat-naked-cake.html" class="submenu-link">Bolos cobertura Kit Kat e Naked Cake</a></li>
+                        <li><a href="bolos-pasta-americana.html" class="submenu-link">Bolos cobertura Pasta Americana</a></li>
+                        <li><a href="bolos-chantininho.html" class="submenu-link">Chantininho (cobertura de acetato)</a></li>
+                        <li><a href="caixa-bento-cake.html" class="submenu-link">Caixa Bentô Cake</a></li>
+                        <li><a href="bolos-vulcao.html" class="submenu-link">Bolo Vulcão</a></li>
+                    </ul>
+                </div>
+                <a href="/#kits" class="navbar-link">Kits</a>
+                <a href="#whatsapp" class="btn btn-primary btn-navbar" data-whatsapp>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Pedir no WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="doces-page salgados-page">
+        <section class="doces-section salgados-section" id="salgados">
+            <div class="container">
+                <h1 class="section-title">Salgados</h1>
+                <p class="section-subtitle">Nossa seleção de salgados artesanais feitos com carinho</p>
+                <div class="doces-grid salgados-grid cardapio-grid">
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-01" data-images='["images/salgados/salgado-01.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-01.webp" alt="Mini folhado de peito de peru" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Mini folhado de peito de peru</h3>
+                            <p>Massa amanteigada e crocante com recheio de peito de peru.</p>
+                            <span class="produto-price">R$ 7,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Mini folhado de peito de peru - R$ 7,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-02" data-images='["images/salgados/salgado-02.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-02.webp" alt="Pizza de palmito" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Pizza de palmito</h3>
+                            <p>Massa macia com recheio de palmito, queijo e orégano.</p>
+                            <span class="produto-price">R$ 6,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Pizza de palmito - R$ 6,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-03" data-images='["images/salgados/salgado-03.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-03.webp" alt="Charuto de pizza" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Charuto de pizza</h3>
+                            <p>Massa com recheio de presunto, queijo, requeijão e orégano.</p>
+                            <span class="produto-price">R$ 8,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Charuto de pizza - R$ 8,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-04" data-images='["images/salgados/salgado-04.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-04.webp" alt="Enroladinho de salsicha" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Enroladinho de salsicha</h3>
+                            <p>Massa envolta em uma salsicha.</p>
+                            <span class="produto-price">R$ 7,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Enroladinho de salsicha - R$ 7,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-05" data-images='["images/salgados/salgado-05.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-05.webp" alt="Pão de queijo" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Pão de queijo</h3>
+                            <p>Sem informações.</p>
+                            <span class="produto-price">R$ 6,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Pão de queijo - R$ 6,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-06" data-images='["images/salgados/salgado-06.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-06.webp" alt="Mini folhado" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Mini folhado</h3>
+                            <p>Massa amanteigada e crocante com recheio de chocolate preto.</p>
+                            <span class="produto-price">R$ 7,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Mini folhado - R$ 7,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-07" data-images='["images/salgados/salgado-07.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-07.webp" alt="Risoles de carne" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Risoles de carne</h3>
+                            <p>Massa com recheio de carne.</p>
+                            <span class="produto-price">R$ 5,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Risoles de carne - R$ 5,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-08" data-images='["images/salgados/salgado-08.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-08.webp" alt="Mini sanduíche" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Mini sanduíche</h3>
+                            <p>Pão brioche recheado com patê de frango e alface.</p>
+                            <span class="produto-price">R$ 6,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Mini sanduíche - R$ 6,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-09" data-images='["images/salgados/salgado-09.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-09.webp" alt="Croquete de linguiça Blumenau" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Croquete de linguiça Blumenau</h3>
+                            <p>Massa com recheio de patê de linguiça Blumenau e requeijão.</p>
+                            <span class="produto-price">R$ 6,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Croquete de linguiça Blumenau - R$ 6,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-10" data-images='["images/salgados/salgado-10.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-10.webp" alt="Mini hambúrguer" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Mini hambúrguer</h3>
+                            <p>Pão brioche com mini hambúrguer de carne, queijo e maionese.</p>
+                            <span class="produto-price">R$ 6,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Mini hambúrguer - R$ 6,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-11" data-images='["images/salgados/salgado-11.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-11.webp" alt="Pastéis" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Pastéis</h3>
+                            <p>Massa crocante, recheada com frango, palmito e carne.</p>
+                            <span class="produto-price">R$ 7,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Pastéis - R$ 7,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-12" data-images='["images/salgados/salgado-12.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-12.webp" alt="Coxinha de Frango" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Coxinha de Frango</h3>
+                            <p>Coxinha de Frango com massa de batata doce recheada com frango e requeijão.</p>
+                            <span class="produto-price">R$ 6,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Coxinha de Frango - R$ 6,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-13" data-images='["images/salgados/salgado-13.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-13.webp" alt="Bolinho de queijo" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Bolinho de queijo</h3>
+                            <p>Massa com recheio de queijo, requeijão e orégano.</p>
+                            <span class="produto-price">R$ 6,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Bolinho de queijo - R$ 6,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-14" data-images='["images/salgados/salgado-14.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-14.webp" alt="Pizza de frango" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Pizza de frango</h3>
+                            <p>Massa macia com recheio de frango, queijo e orégano.</p>
+                            <span class="produto-price">R$ 7,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Pizza de frango - R$ 7,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-15" data-images='["images/salgados/salgado-15.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-15.webp" alt="Quibe" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Quibe</h3>
+                            <p>Massa feita com trigo para quibe, carne moída, hortelã, salsicha e cebolinha.</p>
+                            <span class="produto-price">R$ 8,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Quibe - R$ 8,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="produto-card doces-card salgados-card" data-aos data-salgados-id="salgado-16" data-images='["images/salgados/salgado-16.webp"]'>
+                        <div class="produto-image">
+                            <img src="../images/salgados/salgado-16.webp" alt="Bolinho de queijo" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Bolinho de queijo</h3>
+                            <p>Com massa de batata doce recheada de cream cheese.</p>
+                            <span class="produto-price">R$ 7,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-salgados-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Bolinho de queijo - R$ 7,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Confeitaria Pierotti Encomendas. Feito com carinho.</p>
+        </div>
+    </footer>
+
+    <a href="#salgados" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="24" height="24">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </a>
+
+    <a href="#whatsapp" class="whatsapp-float" data-whatsapp aria-label="Pedir pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Modal Salgados -->
+    <div class="modal-overlay" id="salgados-modal-overlay" aria-hidden="true">
+        <div class="modal modal-doces" id="salgados-modal" role="dialog" aria-labelledby="salgados-modal-title" aria-modal="true">
+            <button class="modal-close" id="salgados-modal-close" aria-label="Fechar">×</button>
+            <div class="modal-image modal-image--carousel">
+                <div class="doces-modal-carousel" id="salgados-modal-carousel"></div>
+                <button type="button" class="doces-carousel-prev doces-carousel-prev--modal" id="salgados-modal-prev" aria-label="Imagem anterior" style="display:none">‹</button>
+                <button type="button" class="doces-carousel-next doces-carousel-next--modal" id="salgados-modal-next" aria-label="Próxima imagem" style="display:none">›</button>
+            </div>
+            <div class="modal-content">
+                <h2 class="modal-title" id="salgados-modal-title"></h2>
+                <p class="modal-description" id="salgados-modal-description"></p>
+                <span class="modal-price" id="salgados-modal-price"></span>
+                <a href="#whatsapp" class="btn btn-primary btn-modal-whatsapp" id="salgados-modal-whatsapp-btn" data-whatsapp>Pedir no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/salgados.js"></script>
+</body>
+</html>

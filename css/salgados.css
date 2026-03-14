@@ -1,0 +1,111 @@
+/* ============================================
+   PÁGINA SALGADOS - Estilos específicos
+   Reutiliza produto-card e grid do doces
+   ============================================ */
+
+.salgados-page {
+    min-height: 100vh;
+}
+
+.salgados-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, var(--creme-dark) 0%, var(--creme) 100%);
+}
+
+/* Grid responsivo: 4 cols desktop, 3 tablet, 1-2 mobile */
+.salgados-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+/* Cards com altura uniforme - alinhados na base */
+.salgados-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.salgados-card .produto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.salgados-card .card-buttons {
+    margin-top: auto;
+}
+
+.salgados-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px var(--shadow-strong);
+}
+
+.salgados-card .produto-image img {
+    transition: transform 0.3s ease;
+}
+
+.salgados-card:hover .produto-image img {
+    transform: scale(1.03);
+}
+
+/* Botões dos cards */
+.salgados-card .card-buttons--small {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.salgados-card .card-buttons--small .btn {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 1024px) {
+    .salgados-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .salgados-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .salgados-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .salgados-section {
+        padding: 3rem 0;
+    }
+
+    .salgados-section .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .salgados-page {
+        padding-top: 0;
+    }
+
+    .salgados-card .produto-info {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .salgados-section .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}

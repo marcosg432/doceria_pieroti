@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Confeitaria Pierotti Encomendas | Cardápio Digital</title>
+    <meta name="description" content="Confeitaria Pierotti Encomendas. Doces e salgados artesanais. Peça pelo WhatsApp e receba em casa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/bolos-chantininho/bolo-01.webp" as="image">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#inicio" class="navbar-logo">Confeitaria Pierotti Encomendas</a>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu">
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+            </button>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="#inicio" class="navbar-link">Início</a>
+                <div class="menu-cardapio" id="menu-cardapio">
+                    <a href="#cardapio" class="navbar-link navbar-link--has-submenu" id="cardapio-trigger">Doces</a>
+                    <ul class="submenu" id="submenu-cardapio">
+                        <li><a href="pages/doces.html" class="submenu-link">Tradicionais</a></li>
+                        <li><a href="pages/gourmet.html" class="submenu-link">Gourmet</a></li>
+                        <li><a href="pages/bombons-tradicionais.html" class="submenu-link">Bombons Tradicionais</a></li>
+                        <li><a href="pages/bombons-finos.html" class="submenu-link">Bombons Finos</a></li>
+                        <li><a href="pages/bombons-gourmet.html" class="submenu-link">Bombons Gourmet</a></li>
+                    </ul>
+                </div>
+                <div class="menu-cardapio" id="menu-bolos">
+                    <a href="#bolos" class="navbar-link navbar-link--has-submenu" id="bolos-trigger">Bolos</a>
+                    <ul class="submenu" id="submenu-bolos">
+                        <li><a href="pages/bolos-kit-kat-naked-cake.html" class="submenu-link">Bolos cobertura Kit Kat e Naked Cake</a></li>
+                        <li><a href="pages/bolos-pasta-americana.html" class="submenu-link">Bolos cobertura Pasta Americana</a></li>
+                        <li><a href="pages/bolos-chantininho.html" class="submenu-link">Chantininho (cobertura de acetato)</a></li>
+                        <li><a href="pages/caixa-bento-cake.html" class="submenu-link">Caixa Bentô Cake</a></li>
+                        <li><a href="pages/bolos-vulcao.html" class="submenu-link">Bolo Vulcão</a></li>
+                    </ul>
+                </div>
+                <a href="#kits" class="navbar-link">Kits</a>
+                <a href="#whatsapp" class="btn btn-primary btn-navbar" data-whatsapp>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Pedir no WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <header class="hero" id="inicio">
+        <div class="hero-slider" aria-label="Carrossel de produtos">
+            <div class="hero-slide hero-slide--active" aria-hidden="false"><img src="images/bolos-chantininho/bolo-01.webp" alt="Bolo chantininho" loading="eager"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bolos-chantininho/bolo-02.webp" alt="Bolo chantininho" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bombons-tradicionais/bombom-tradicional-01.webp" alt="Bombons tradicionais" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bolos-vulcao/vulcao-01.webp" alt="Bolo vulcão" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bolos-vulcao/vulcao-02.webp" alt="Bolo vulcão" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bombons-gourmet/bombom-gourmet-01.webp" alt="Bombons gourmet" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bolos-pasta-americana/bolo-01.webp" alt="Bolo pasta americana" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bolos-pasta-americana/bolo-02.webp" alt="Bolo pasta americana" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bombons-tradicionais/bombom-tradicional-02.webp" alt="Bombons tradicionais" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bolos-kit-kat-naked-cake/bolo-01.webp" alt="Bolo Kit Kat" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/caixa-bento-cake/bento-01.webp" alt="Caixa bentô cake" loading="lazy"></div>
+            <div class="hero-slide" aria-hidden="true"><img src="images/bombons-gourmet/bombom-gourmet-02.webp" alt="Bombons gourmet" loading="lazy"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-exemplo">Sabores artesanais feitos com carinho</p>
+            <h1 class="hero-title">Confeitaria Pierotti Encomendas</h1>
+            <p class="hero-subtitle">Descubra nossos doces e salgados preparados com ingredientes selecionados.</p>
+            <p class="hero-complemento">Peça pelo WhatsApp e receba em casa.</p>
+            <div class="hero-buttons">
+                <a href="#cardapio" class="btn btn-outline btn-hero">Ver Cardápio</a>
+                <a href="#whatsapp" class="btn btn-primary btn-hero" data-whatsapp>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Pedir no WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll" data-scroll-to="cardapio">
+            <span>Conheça os produtos</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- 2. CARDÁPIO COMPLETO -->
+    <section class="cardapio" id="cardapio">
+        <div class="container">
+            <h2 class="section-title">Cardápio Completo</h2>
+            <p class="section-subtitle">Catálogo com todas as delícias artesanais</p>
+            <div class="cardapio-grid cardapio-grid--categorias">
+                <a href="pages/doces.html" class="produto-card cardapio-categoria-card" data-aos>
+                    <div class="produto-image">
+                        <img src="images/bombons-tradicionais/bombom-tradicional-01.webp" alt="Doces artesanais" loading="eager" width="600" height="600">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Doces</h3>
+                        <p>Conheça nossos doces artesanais feitos com ingredientes selecionados.</p>
+                        <span class="btn btn-primary btn-full btn-categoria">Ver cardápio de doces</span>
+                    </div>
+                </a>
+                <a href="pages/bolos-kit-kat-naked-cake.html" class="produto-card cardapio-categoria-card" data-aos>
+                    <div class="produto-image">
+                        <img src="images/bolos-kit-kat-naked-cake/bolo-01.webp" alt="Bolos Kit Kat e Naked Cake" loading="lazy">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Bolos</h3>
+                        <p>Conheça nossos bolos artesanais com coberturas especiais e recheios irresistíveis.</p>
+                        <span class="btn btn-primary btn-full btn-categoria">Ver cardápio de bolos</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COMBOS / KITS -->
+    <section class="kits" id="kits">
+        <div class="container">
+            <h2 class="section-title">Kits e combos</h2>
+            <p class="section-subtitle">Presenteie com praticidade e economia</p>
+            <div class="kits-grid">
+                <article class="kit-card kit-destaque" data-aos data-product-id="kit-pascoa">
+                    <span class="kit-badge kit-mais-pedido">Mais pedido</span>
+                    <div class="kit-image">
+                        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&q=80" alt="Kit Páscoa Especial">
+                    </div>
+                    <div class="kit-info">
+                        <h3>Kit Doces Especial</h3>
+                        <ul class="kit-conteudo">
+                            <li>2 caixas de trufas (sabores à escolha)</li>
+                            <li>12 brigadeiros gourmet</li>
+                            <li>Embalagem presenteável</li>
+                        </ul>
+                        <span class="kit-price">R$ 139,90</span>
+                        <div class="card-buttons">
+                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
+                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Kit Doces Especial - R$ 139,90">Pedir no WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="kit-card" data-aos data-product-id="kit-familia">
+                    <span class="kit-badge kit-oferta">Oferta especial</span>
+                    <div class="kit-image">
+                        <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=800&q=80" alt="Kit Família">
+                    </div>
+                    <div class="kit-info">
+                        <h3>Kit Família Completo</h3>
+                        <ul class="kit-conteudo">
+                            <li>3 caixas de doces (300g cada)</li>
+                            <li>20 brigadeiros + 12 beijinhos</li>
+                            <li>Caixa presente premium</li>
+                        </ul>
+                        <span class="kit-price">R$ 219,90</span>
+                        <div class="card-buttons">
+                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
+                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Kit Família Completo - R$ 219,90">Pedir no WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ENCOMENDA PERSONALIZADA -->
+    <section class="encomenda" id="encomenda">
+        <div class="container">
+            <div class="encomenda-box" data-aos>
+                <h2 class="encomenda-title">Quer fazer uma encomenda especial?</h2>
+                <p class="encomenda-text">Se você deseja um doce personalizado, quantidade maior ou algo diferente do cardápio, fale conosco. Atendemos pedidos sob medida com todo o carinho!</p>
+                <a href="#whatsapp" class="btn btn-primary btn-encomenda" data-whatsapp data-message="personalizada">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Fazer encomenda personalizada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SEÇÃO DE URGÊNCIA -->
+    <section class="urgencia">
+        <div class="container">
+            <div class="urgencia-content" data-aos>
+                <h2 class="urgencia-title">Produção limitada para garantir qualidade.</h2>
+                <p class="urgencia-text">Garanta seu pedido antes que acabem as unidades disponíveis.</p>
+                <a href="#whatsapp" class="btn btn-primary btn-urgencia" data-whatsapp>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Pedir agora pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Confeitaria Pierotti Encomendas. Feito com carinho.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#inicio" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="24" height="24">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </a>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="#whatsapp" class="whatsapp-float" data-whatsapp aria-label="Pedir pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Modal Produto -->
+    <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+        <div class="modal" id="product-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+            <button class="modal-close" id="modal-close" aria-label="Fechar">×</button>
+            <div class="modal-image">
+                <img id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-content">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <p class="modal-description" id="modal-description"></p>
+                <h3 class="modal-section">Ingredientes principais</h3>
+                <ul class="modal-ingredients" id="modal-ingredients"></ul>
+                <p class="modal-peso" id="modal-peso"></p>
+                <span class="modal-price" id="modal-price"></span>
+                <a href="#whatsapp" class="btn btn-primary btn-modal-whatsapp" id="modal-whatsapp-btn" data-whatsapp>Pedir no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

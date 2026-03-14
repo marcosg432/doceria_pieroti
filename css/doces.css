@@ -1,0 +1,669 @@
+/* ============================================
+   PÁGINA DOCES - Estilos específicos
+   Reutiliza produto-card do cardápio
+   ============================================ */
+
+/* --- Layout duas colunas Tradicionais (inspirado no PDF) --- */
+.tradicionais-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.tradicionais-col-carousels {
+    flex: 0 0 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tradicionais-col-card {
+    flex: 0 0 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* --- Botão Pedir no WhatsApp (abaixo do card) --- */
+.btn-tradicionais-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    min-width: 220px;
+    padding: 0.9rem 1.75rem;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35), 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+    animation: btn-tradicionais-float 4s ease-in-out infinite;
+}
+
+.btn-tradicionais-whatsapp:hover,
+.btn-tradicionais-whatsapp:focus {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tradicionais-whatsapp:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-tradicionais-whatsapp-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes btn-tradicionais-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+.btn-tradicionais-whatsapp:hover,
+.btn-tradicionais-whatsapp:focus {
+    animation: none;
+}
+
+/* --- Card sabores tradicionais (estilo PDF cardápio) --- */
+.tradicionais-sabores-card {
+    background: var(--white, #fff);
+    border-radius: var(--radius, 16px);
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px var(--shadow, rgba(26, 15, 10, 0.12));
+    position: sticky;
+    top: 100px;
+    text-align: center;
+}
+
+.tradicionais-sabores-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--chocolate, #3d2319);
+    margin: 0 0 1rem 0;
+}
+
+.tradicionais-sabores-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+}
+
+.tradicionais-sabores-list li {
+    padding: 0.4rem 0;
+    font-size: 1.2rem;
+    color: var(--text-dark, #1a0f0a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+}
+
+.tradicionais-sabores-list .sabor-nome {
+    display: block;
+}
+
+.tradicionais-sabores-list .sabor-desc {
+    font-size: 0.85em;
+    color: var(--text-dark, #1a0f0a);
+    font-weight: 400;
+}
+
+/* Bloco preço com destaque (estilo PDF) */
+.tradicionais-preco-block {
+    background: rgba(26, 15, 10, 0.06);
+    border-radius: 10px;
+    padding: 0.04rem 1.5rem 0.4rem;
+    margin-top: 0.5rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.1rem;
+}
+
+.tradicionais-preco-valor {
+    font-weight: 700;
+    font-size: 1.85rem;
+    color: var(--chocolate, #3d2319);
+    margin-top: -0.22rem;
+}
+
+.tradicionais-preco-unidade {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--chocolate, #3d2319);
+}
+
+/* --- Carrosséis (360x360px, proporção quadrada, tamanho médio) --- */
+.tradicionais-carousel-row {
+    width: 360px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius, 16px);
+    box-shadow: 0 4px 20px var(--shadow, rgba(26, 15, 10, 0.12));
+}
+
+.tradicionais-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.tradicionais-carousel-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    border-radius: var(--radius, 16px);
+    overflow: hidden;
+}
+
+.tradicionais-carousel-slide img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsivo mobile: manter duas colunas lado a lado (layout cardápio PDF) */
+@media (max-width: 768px) {
+    /* Sticky footer: main expande para empurrar footer ao final da viewport */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .doces-page {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: calc(100vh - 72px);
+    }
+
+    .doces-section:has(.tradicionais-layout) {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 0;
+    }
+
+    .doces-section:has(.tradicionais-layout) .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .doces-section:has(.tradicionais-layout) .tradicionais-layout {
+        flex: 0 0 auto;
+    }
+
+    .tradicionais-layout {
+        flex-direction: row;
+        gap: 1.25rem;
+        margin: 0.5rem 0;
+        align-items: stretch;
+    }
+
+    .tradicionais-col-carousels {
+        flex: 0 0 45%;
+        min-width: 110px;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .tradicionais-col-card {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: none;
+        margin-top: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .tradicionais-sabores-card {
+        align-self: stretch;
+    }
+
+    .btn-tradicionais-whatsapp {
+        min-width: 200px;
+        padding: 0.9rem 1.5rem;
+    }
+
+    .tradicionais-carousel-row {
+        width: 100%;
+    }
+
+    .tradicionais-sabores-card {
+        position: static;
+        padding: 0.9rem 1rem;
+    }
+
+    .tradicionais-sabores-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .tradicionais-sabores-list li {
+        padding: 0.35rem 0;
+        font-size: 1.08rem;
+    }
+
+    .tradicionais-preco-block {
+        padding: 0.12rem 1rem 0.5rem;
+        margin-top: 0.75rem;
+    }
+
+    .tradicionais-preco-valor {
+        font-size: 1.45rem;
+    }
+
+    .tradicionais-preco-unidade {
+        font-size: 0.98rem;
+    }
+
+    .btn-tradicionais-whatsapp {
+        min-width: 200px;
+        padding: 0.9rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tradicionais-layout {
+        gap: 1rem;
+    }
+
+    .tradicionais-col-carousels {
+        flex: 0 0 45%;
+        min-width: 95px;
+        max-width: 165px;
+        gap: 2.25rem;
+    }
+
+    .tradicionais-col-card {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: none;
+        margin-top: 1rem;
+    }
+
+    .tradicionais-sabores-card {
+        padding: 0.75rem 0.85rem;
+    }
+
+    .tradicionais-sabores-title {
+        font-size: 1.25rem;
+    }
+
+    .tradicionais-sabores-list li {
+        font-size: 1rem;
+    }
+
+    .tradicionais-preco-block {
+        padding: 0.1rem 0.85rem 0.45rem;
+        margin-top: 0.6rem;
+    }
+
+    .tradicionais-preco-valor {
+        font-size: 1.28rem;
+    }
+
+    .tradicionais-preco-unidade {
+        font-size: 0.92rem;
+    }
+}
+
+.doces-page {
+    min-height: 100vh;
+}
+
+/* Centralizar seção Tradicionais na tela (espaço equilibrado acima e abaixo) */
+.doces-page:has(.tradicionais-layout) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.doces-section:has(.tradicionais-layout) {
+    flex: 0 0 auto;
+    padding: 2.5rem 0;
+    margin-bottom: 4rem; /* Desloca o bloco para cima (subida moderada) */
+}
+
+.doces-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, var(--creme-dark) 0%, var(--creme) 100%);
+}
+
+/* Grid responsivo: 4 cols desktop, 3 tablet, 1-2 mobile */
+.doces-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+/* Cards com altura uniforme - alinhados na base */
+.doces-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doces-card .produto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.doces-card .card-buttons {
+    margin-top: auto;
+}
+
+.doces-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px var(--shadow-strong);
+}
+
+.doces-card .produto-image img {
+    transition: transform 0.3s ease;
+}
+
+.doces-card:hover .produto-image img {
+    transform: scale(1.03);
+}
+
+/* Carrossel dentro do card */
+.produto-image--carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.doces-carousel {
+    display: flex;
+    transition: transform 0.4s ease;
+    height: 100%;
+}
+
+.doces-carousel img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.doces-carousel-prev,
+.doces-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    color: var(--chocolate);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+    padding: 0;
+}
+
+.doces-carousel-prev {
+    left: 8px;
+}
+
+.doces-carousel-next {
+    right: 8px;
+}
+
+.doces-carousel-prev:hover,
+.doces-carousel-next:hover {
+    background: var(--chocolate);
+    color: var(--creme);
+}
+
+/* Ocultar botões do carrossel em cards com uma imagem */
+.doces-card:not(.doces-card--carousel) .doces-carousel-prev,
+.doces-card:not(.doces-card--carousel) .doces-carousel-next {
+    display: none;
+}
+
+/* Botões dos cards - alinhamento */
+.doces-card .card-buttons--small {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.doces-card .card-buttons--small .btn {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+}
+
+/* Link ativo na navbar */
+.navbar-link--active {
+    color: var(--gold-light) !important;
+}
+
+.navbar-link--active::after {
+    width: 100%;
+}
+
+/* Modal Doces - carrossel */
+.modal-image--carousel {
+    position: relative;
+    min-height: 200px;
+}
+
+.doces-modal-carousel {
+    display: flex;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+
+.doces-modal-carousel img {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.doces-carousel-prev--modal,
+.doces-carousel-next--modal {
+    width: 44px;
+    height: 44px;
+    font-size: 1.75rem;
+}
+
+.doces-carousel-prev--modal {
+    left: 12px;
+}
+
+.doces-carousel-next--modal {
+    right: 12px;
+}
+
+/* Ocultar navegação do modal quando só tem 1 imagem */
+.modal-doces .modal-image--carousel:has(.doces-modal-carousel img:only-child) .doces-carousel-prev--modal,
+.modal-doces .modal-image--carousel:has(.doces-modal-carousel img:only-child) .doces-carousel-next--modal {
+    display: none;
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 1024px) {
+    .doces-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .doces-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .doces-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .doces-section {
+        padding: 3rem 0;
+    }
+
+    .doces-section .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .doces-page {
+        padding-top: 0;
+    }
+
+    .doces-card .produto-info {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .doces-section .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* ============================================
+   PÁGINA BOLO VULCÃO - Carrossel ao lado do card, centralizado
+   ============================================ */
+.page-bolos-vulcao .doces-section:has(.tradicionais-layout) .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-bolos-vulcao .tradicionais-layout {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Posição vertical do carrossel: valor negativo = sobe, positivo = desce */
+.page-bolos-vulcao .tradicionais-carousel-row {
+    width: 420px;
+    transform: translateY(-1rem);
+}
+
+.page-bolos-vulcao .tradicionais-carousel-slide img {
+    aspect-ratio: 1/1.15;
+}
+
+/* ============================================
+   PÁGINA CHANTININHO - Tamanhos reduzidos
+   (card com muito conteúdo)
+   ============================================ */
+.page-bolos-chantininho .section-title {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.page-bolos-chantininho .tradicionais-sabores-card {
+    padding: 1.5rem 1.25rem;
+}
+
+.page-bolos-chantininho .tradicionais-sabores-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+}
+
+.page-bolos-chantininho .tradicionais-sabores-list li {
+    padding: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.page-bolos-chantininho .tradicionais-sabores-list li strong {
+    font-size: 0.9em;
+}
+
+.page-bolos-chantininho .tradicionais-sabores-list .sabor-desc {
+    font-size: 0.8em;
+}
+
+@media (max-width: 900px) {
+    .page-bolos-chantininho .section-title {
+        font-size: 1.4rem;
+    }
+    .page-bolos-chantininho .tradicionais-sabores-card {
+        padding: 1rem 0.9rem;
+    }
+    .page-bolos-chantininho .tradicionais-sabores-title {
+        font-size: 1.2rem;
+    }
+    .page-bolos-chantininho .tradicionais-sabores-list li {
+        font-size: 0.9rem;
+        padding: 0.2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-bolos-chantininho .section-title {
+        font-size: 1.25rem;
+    }
+    .page-bolos-chantininho .tradicionais-col-carousels {
+        flex: 0 0 38%;
+        min-width: 85px;
+        max-width: 140px;
+    }
+    .page-bolos-chantininho .tradicionais-sabores-card {
+        padding: 0.7rem 0.75rem;
+    }
+    .page-bolos-chantininho .tradicionais-sabores-title {
+        font-size: 1.05rem;
+    }
+    .page-bolos-chantininho .tradicionais-sabores-list li {
+        font-size: 0.82rem;
+        padding: 0.15rem 0;
+    }
+    .page-bolos-chantininho .btn-tradicionais-whatsapp {
+        padding: 0.65rem 1.2rem;
+        font-size: 0.9rem;
+        min-width: 160px;
+    }
+    .page-bolos-chantininho .whatsapp-float {
+        width: 48px;
+        height: 48px;
+    }
+    .page-bolos-chantininho .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+    }
+}

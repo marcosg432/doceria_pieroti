@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/doces", "destination": "/pages/doces.html" },
+    { "source": "/gourmet", "destination": "/pages/gourmet.html" },
+    { "source": "/bombons-tradicionais", "destination": "/pages/bombons-tradicionais.html" },
+    { "source": "/bombons-finos", "destination": "/pages/bombons-finos.html" },
+    { "source": "/bombons-gourmet", "destination": "/pages/bombons-gourmet.html" },
+    { "source": "/bolos-kit-kat-naked-cake", "destination": "/pages/bolos-kit-kat-naked-cake.html" },
+    { "source": "/bolos-pasta-americana", "destination": "/pages/bolos-pasta-americana.html" },
+    { "source": "/bolos-chantininho", "destination": "/pages/bolos-chantininho.html" },
+    { "source": "/caixa-bento-cake", "destination": "/pages/caixa-bento-cake.html" },
+    { "source": "/bolos-vulcao", "destination": "/pages/bolos-vulcao.html" },
+    { "source": "/salgados", "destination": "/pages/salgados.html" }
+  ]
+}
