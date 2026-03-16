@@ -74,8 +74,14 @@ a {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 1rem 0;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+    height: 72px;
+    min-height: 72px;
+    max-height: 72px;
+    padding: 0 0;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .navbar.navbar--scrolled {
@@ -91,6 +97,7 @@ a {
 
 .navbar-container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
@@ -99,6 +106,10 @@ a {
 }
 
 .navbar-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: visible;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     font-weight: 700;
@@ -106,8 +117,17 @@ a {
     letter-spacing: 0.02em;
 }
 
-.navbar-logo:hover {
-    color: var(--gold-light);
+.navbar-logo-img {
+    height: 70px;
+    width: auto;
+    max-width: 260px;
+    display: block;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-logo:hover .navbar-logo-img {
+    opacity: 0.9;
 }
 
 .navbar-menu {
@@ -150,8 +170,8 @@ a {
     color: var(--gold-light);
 }
 
-.navbar.navbar--scrolled .navbar-logo {
-    color: var(--white);
+.navbar.navbar--scrolled .navbar-logo-img {
+    filter: brightness(1.05);
 }
 
 .btn-navbar {
@@ -481,6 +501,16 @@ a {
     max-width: 750px;
 }
 
+.hero-logo {
+    display: block;
+    margin: 0 auto 1.25rem;
+    max-width: 360px;
+    width: 85%;
+    height: auto;
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.4));
+    animation: heroFadeUp 1s ease-out both;
+}
+
 .hero-exemplo {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.7);
@@ -705,6 +735,10 @@ a {
     gap: 2rem;
 }
 
+.cardapio-grid--4col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .cardapio-categoria-card {
     text-decoration: none;
     color: inherit;
@@ -789,113 +823,165 @@ a {
 }
 
 /* ============================================
-   4. KITS DE PÁSCOA
+   4. NOSSA LOCALIZAÇÃO (vídeo background)
    ============================================ */
-.kits {
-    padding: 5rem 0;
-    background: var(--white);
-}
-
-.kits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
-    gap: 2rem;
-}
-
-.kit-card {
+.localizacao {
     position: relative;
-    background: var(--creme);
-    border-radius: var(--radius-lg);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    transition: var(--transition);
-    box-shadow: 0 12px 40px var(--shadow);
 }
 
-.kit-card.kit-destaque {
-    border: 2px solid var(--gold);
-}
-
-.kit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 55px var(--shadow-strong);
-}
-
-.kit-badge {
+.localizacao-video-wrap {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.4rem 1rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 50px;
-    z-index: 2;
+    inset: 0;
+    z-index: 0;
 }
 
-.kit-mais-pedido {
-    background: var(--gold);
-    color: var(--chocolate-dark);
-}
-
-.kit-oferta {
-    background: var(--chocolate);
-    color: var(--creme);
-}
-
-.kit-image {
-    aspect-ratio: 16/10;
-    overflow: hidden;
-}
-
-.kit-image img {
-    width: 100%;
-    height: 100%;
+.localizacao-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
     object-fit: cover;
-    transition: transform 0.5s ease;
+    filter: brightness(0.85);
 }
 
-.kit-card:hover .kit-image img {
-    transform: scale(1.05);
+.localizacao-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(58, 31, 20, 0.55) 0%,
+        rgba(58, 31, 20, 0.4) 50%,
+        rgba(58, 31, 20, 0.5) 100%
+    );
+    z-index: 1;
 }
 
-.kit-info {
-    padding: 1.75rem;
+.localizacao-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    width: 100%;
 }
 
-.kit-info h3 {
+.localizacao-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.localizacao-subtitle {
+    font-size: 1.1rem;
+    color: var(--creme-dark);
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+}
+
+.localizacao-card {
+    display: inline-block;
+    max-width: 420px;
+    width: 100%;
+    background: rgba(255, 248, 237, 0.96);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.localizacao-card[data-aos] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.localizacao-card[data-aos].aos-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.localizacao-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--chocolate-dark);
     margin-bottom: 1rem;
 }
 
-.kit-conteudo {
-    list-style: none;
-    margin-bottom: 1rem;
-}
-
-.kit-conteudo li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.4rem;
-    font-size: 0.95rem;
+.localizacao-endereco {
+    font-style: normal;
+    font-size: 1rem;
     color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
-.kit-conteudo li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--gold);
-    font-weight: 700;
+.localizacao-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.kit-price {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--chocolate-medium);
-    margin-bottom: 1rem;
+.btn-localizacao-maps {
+    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+    border-radius: var(--radius);
+}
+
+.btn-localizacao-maps:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+}
+
+.btn-localizacao-instagram {
+    background: transparent !important;
+    color: var(--chocolate-dark) !important;
+    border: 2px solid var(--chocolate-medium) !important;
+}
+
+.btn-localizacao-instagram:hover {
+    background: var(--chocolate) !important;
+    color: var(--creme) !important;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .localizacao {
+        min-height: 65vh;
+        padding: 3rem 0;
+    }
+
+    .localizacao-content {
+        padding: 3rem 1rem;
+    }
+
+    .localizacao-card {
+        padding: 1.75rem 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .localizacao-subtitle {
+        margin-bottom: 1.75rem;
+    }
+
+    .localizacao-buttons .btn {
+        width: 100%;
+        min-height: 44px;
+    }
 }
 
 /* ============================================
@@ -1134,6 +1220,68 @@ a {
     font-size: 0.9rem;
 }
 
+.footer-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 200px;
+    height: auto;
+    opacity: 0.9;
+}
+
+.footer-logo + p {
+    margin-top: 0.5rem;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 200px;
+    height: auto;
+    opacity: 0.95;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    opacity: 0.95;
+    max-width: 160px;
+    height: auto;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    opacity: 0.95;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 200px;
+    height: auto;
+    opacity: 0.95;
+}
+
+.footer-logo {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto 1rem;
+    display: block;
+    opacity: 0.95;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 200px;
+    height: auto;
+    opacity: 0.95;
+}
+
+.footer-logo + p {
+    margin-top: 0.5rem;
+}
+
 /* ============================================
    BOTÃO VOLTAR AO TOPO
    ============================================ */
@@ -1218,6 +1366,13 @@ a {
 /* ============================================
    RESPONSIVO
    ============================================ */
+@media (max-width: 600px) {
+    .navbar-logo-img {
+        height: 85px;
+        max-width: 220px;
+    }
+}
+
 @media (max-width: 900px) {
     .navbar-toggle {
         display: flex;
@@ -1306,7 +1461,7 @@ a {
 
     .queridinhos,
     .cardapio,
-    .kits,
+    .localizacao,
     .encomenda,
     .urgencia {
         padding: 3rem 0;
@@ -1317,16 +1472,12 @@ a {
     }
 
     .cardapio-grid,
-    .cardapio-grid--categorias {
+    .cardapio-grid--categorias,
+    .cardapio-grid--4col {
         grid-template-columns: 1fr;
     }
 
     .cardapio-grid--categorias {
-        gap: 1.5rem;
-    }
-
-    .kits-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 

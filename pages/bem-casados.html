@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Bolos cobertura Pasta Americana | Confeitaria Pierotti Encomendas</title>
-    <meta name="description" content="Bolos com cobertura em Pasta Americana. Decoração refinada para festas e eventos especiais.">
+    <title>Bem Casados | Confeitaria Pierotti Encomendas</title>
+    <meta name="description" content="Bem casados artesanais para o seu casamento. Lembrancinhas personalizadas feitas com carinho.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/doces.css">
+    <style>
+        /* Bem casados: 3 imagens empilhadas (sem carrossel) */
+        .bem-casados-col-images {
+            flex: 0 0 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .bem-casados-image-row {
+            width: 360px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: var(--radius, 16px);
+            box-shadow: 0 4px 20px var(--shadow, rgba(26, 15, 10, 0.12));
+        }
+        .bem-casados-image-row img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            display: block;
+        }
+        .tradicionais-sabores-desc {
+            font-size: 1.1rem;
+            color: var(--text-dark, #1a0f0a);
+            margin: 0 0 1rem 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .bem-casados-col-images {
+                flex: 0 0 45%;
+                min-width: 110px;
+                max-width: 200px;
+            }
+            .bem-casados-image-row { width: 100%; }
+        }
+    </style>
 </head>
-<body class="page-bolos-pasta-americana">
+<body class="page-bem-casados">
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
@@ -31,7 +67,7 @@
                         <li><a href="bombons-tradicionais.html" class="submenu-link">Bombons Tradicionais</a></li>
                         <li><a href="bombons-finos.html" class="submenu-link">Bombons Finos</a></li>
                         <li><a href="bombons-gourmet.html" class="submenu-link">Bombons Gourmet</a></li>
-                        <li><a href="bem-casados.html" class="submenu-link">Bem Casados</a></li>
+                        <li><a href="bem-casados.html" class="submenu-link submenu-link--active">Bem Casados</a></li>
                     </ul>
                 </div>
                 <div class="menu-cardapio" id="menu-bolos">
@@ -39,7 +75,7 @@
                     <ul class="submenu" id="submenu-bolos">
                         <li><a href="bolos-chantininho.html#monte-bolo" class="submenu-link">Monte seu bolo</a></li>
                         <li><a href="bolos-kit-kat-naked-cake.html" class="submenu-link">Bolos cobertura Kit Kat e Naked Cake</a></li>
-                        <li><a href="bolos-pasta-americana.html" class="submenu-link submenu-link--active">Bolos cobertura Pasta Americana</a></li>
+                        <li><a href="bolos-pasta-americana.html" class="submenu-link">Bolos cobertura Pasta Americana</a></li>
                         <li><a href="bolos-chantininho.html" class="submenu-link">Chantininho (cobertura de acetato)</a></li>
                         <li><a href="caixa-bento-cake.html" class="submenu-link">Caixa Bentô Cake</a></li>
                         <li><a href="bolos-vulcao.html" class="submenu-link">Bolo Vulcão</a></li>
@@ -57,59 +93,37 @@
         </div>
     </nav>
 
-    <!-- SEÇÃO BOLOS COBERTURA PASTA AMERICANA -->
+    <!-- SEÇÃO BEM CASADOS -->
     <main class="doces-page">
         <section class="doces-section" id="doces">
             <div class="container">
-                <h1 class="section-title">Bolos cobertura Pasta Americana</h1>
+                <h1 class="section-title">Bem Casados</h1>
 
                 <div class="tradicionais-layout">
-                    <div class="tradicionais-col-carousels">
-                        <div class="tradicionais-carousel-row" data-tradicionais-carousel data-visible="1" aria-label="Carrossel 1 de bolos Pasta Americana">
-                            <div class="tradicionais-carousel-track">
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-01.webp" alt="Bolos cobertura Pasta Americana" loading="eager"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-02.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-03.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-01.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                            </div>
+                    <!-- COLUNA ESQUERDA: 3 imagens empilhadas (sem carrossel) -->
+                    <div class="bem-casados-col-images">
+                        <div class="bem-casados-image-row">
+                            <img src="../images/bem-casados/bem-casados-01.webp" alt="Bem casados" loading="eager">
                         </div>
-                        <div class="tradicionais-carousel-row" data-tradicionais-carousel data-visible="1" aria-label="Carrossel 2 de bolos Pasta Americana">
-                            <div class="tradicionais-carousel-track">
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-04.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-05.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-06.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-04.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                            </div>
+                        <div class="bem-casados-image-row">
+                            <img src="../images/bem-casados/bem-casados-02.webp" alt="Bem casados" loading="lazy">
                         </div>
-                        <div class="tradicionais-carousel-row" data-tradicionais-carousel data-visible="1" aria-label="Carrossel 3 de bolos Pasta Americana">
-                            <div class="tradicionais-carousel-track">
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-07.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-08.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-09.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                                <div class="tradicionais-carousel-slide"><img src="../images/bolos-pasta-americana/bolo-07.webp" alt="Bolos cobertura Pasta Americana" loading="lazy"></div>
-                            </div>
+                        <div class="bem-casados-image-row">
+                            <img src="../images/bem-casados/bem-casados-03.webp" alt="Bem casados" loading="lazy">
                         </div>
                     </div>
 
+                    <!-- COLUNA DIREITA: card sabores -->
                     <div class="tradicionais-col-card">
                         <div class="tradicionais-sabores-card">
-                            <h3 class="tradicionais-sabores-title">Preços por Kg</h3>
-                            <ul class="tradicionais-sabores-list">
-                                <li>
-                                    <span class="sabor-nome">Recheios tradicionais</span>
-                                    <span class="sabor-desc">R$ 160,00 o Kg</span>
-                                </li>
-                                <li>
-                                    <span class="sabor-nome">Recheios gourmet</span>
-                                    <span class="sabor-desc">R$ 175,00 o Kg</span>
-                                </li>
-                            </ul>
+                            <h3 class="tradicionais-sabores-title">Bem Casados</h3>
+                            <p class="tradicionais-sabores-desc">Bolo de pão de ló redondo recheado com doce de leite. Embalado no papel crepom e fita na cor escolhida pelo cliente.</p>
                             <div class="tradicionais-preco-block">
-                                <span class="tradicionais-preco-valor">R$ 160,00 – R$ 175,00</span>
-                                <span class="tradicionais-preco-unidade">o Kg (conforme recheio)</span>
+                                <span class="tradicionais-preco-valor">R$ 6,50</span>
+                                <span class="tradicionais-preco-unidade">unidade</span>
                             </div>
                         </div>
-                        <a href="#whatsapp" class="btn-tradicionais-whatsapp" data-whatsapp data-message="Olá! Vim pelo site e gostaria de solicitar um orçamento de bolo com cobertura Pasta Americana.">
+                        <a href="#whatsapp" class="btn-tradicionais-whatsapp" data-whatsapp data-message="Olá! Vim pelo site e gostaria de pedir bem casados (bolo de pão de ló redondo recheado com doce de leite) - R$ 6,50 a unidade.">
                             <svg class="btn-tradicionais-whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                             </svg>

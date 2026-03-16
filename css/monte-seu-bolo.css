@@ -1,0 +1,193 @@
+/* ============================================
+   MONTE SEU BOLO - Seletor interativo
+   ============================================ */
+
+.monte-bolo-page {
+    padding: 2rem 0 4rem;
+    min-height: calc(100vh - 72px);
+}
+
+.monte-bolo-section .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--chocolate, #3A1F14);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.monte-bolo-section .section-subtitle {
+    text-align: center;
+    color: var(--text-muted, #5d4a3d);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Layout duas colunas */
+.monte-bolo-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.monte-bolo-opcoes {
+    flex: 1;
+    min-width: 280px;
+    max-width: 640px;
+}
+
+.monte-bolo-resumo-col {
+    flex: 0 0 340px;
+    position: sticky;
+    top: 100px;
+}
+
+/* Grupos de opção */
+.monte-bolo-grupo {
+    margin-bottom: 2rem;
+}
+
+.monte-bolo-grupo-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--chocolate, #3A1F14);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.monte-bolo-preco {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--chocolate, #3A1F14);
+}
+
+/* Botões de opção */
+.monte-bolo-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.monte-bolo-btn {
+    padding: 0.65rem 1.15rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--chocolate, #3A1F14);
+    background: var(--white, #FFF8ED);
+    border: 2px solid var(--creme-dark, #E7D6BF);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.monte-bolo-btn:hover {
+    border-color: var(--gold, #7FB3AE);
+    background: rgba(127, 179, 174, 0.08);
+}
+
+.monte-bolo-btn.is-selected {
+    background: linear-gradient(135deg, #7FB3AE 0%, #6a9a96 100%);
+    border-color: var(--gold-dark, #6a9a96);
+    color: #fff;
+}
+
+/* Card resumo */
+.monte-bolo-resumo-card {
+    background: var(--white, #fff);
+    border-radius: var(--radius, 16px);
+    padding: 2rem;
+    box-shadow: 0 4px 24px var(--shadow, rgba(58, 31, 20, 0.12));
+}
+
+.monte-bolo-resumo-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--chocolate, #3A1F14);
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--creme-dark, #E7D6BF);
+}
+
+.monte-bolo-resumo-conteudo {
+    min-height: 80px;
+    margin-bottom: 1.25rem;
+}
+
+.monte-bolo-resumo-vazio {
+    color: var(--text-muted, #5d4a3d);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.monte-bolo-resumo-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.monte-bolo-resumo-lista li {
+    padding: 0.4rem 0;
+    font-size: 1rem;
+    color: var(--text-dark, #3A1F14);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.monte-bolo-resumo-lista li strong {
+    color: var(--chocolate, #3A1F14);
+    flex-shrink: 0;
+}
+
+.monte-bolo-resumo-lista li span {
+    text-align: right;
+}
+
+/* Botão WhatsApp */
+.btn-monte-bolo-whatsapp {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.btn-monte-bolo-whatsapp .btn-icon {
+    flex-shrink: 0;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .monte-bolo-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .monte-bolo-resumo-col {
+        flex: none;
+        max-width: 100%;
+        position: static;
+    }
+}
+
+@media (max-width: 500px) {
+    .monte-bolo-buttons {
+        flex-direction: column;
+    }
+
+    .monte-bolo-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

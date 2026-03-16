@@ -5,6 +5,7 @@
     { "source": "/bombons-tradicionais", "destination": "/pages/bombons-tradicionais.html" },
     { "source": "/bombons-finos", "destination": "/pages/bombons-finos.html" },
     { "source": "/bombons-gourmet", "destination": "/pages/bombons-gourmet.html" },
+    { "source": "/bem-casados", "destination": "/pages/bem-casados.html" },
     { "source": "/bolos-kit-kat-naked-cake", "destination": "/pages/bolos-kit-kat-naked-cake.html" },
     { "source": "/bolos-pasta-americana", "destination": "/pages/bolos-pasta-americana.html" },
     { "source": "/bolos-chantininho", "destination": "/pages/bolos-chantininho.html" },

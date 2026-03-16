@@ -11,11 +11,14 @@ const rewrites = {
   '/bombons-tradicionais': '/pages/bombons-tradicionais.html',
   '/bombons-finos': '/pages/bombons-finos.html',
   '/bombons-gourmet': '/pages/bombons-gourmet.html',
+  '/bem-casados': '/pages/bem-casados.html',
   '/bolos-kit-kat-naked-cake': '/pages/bolos-kit-kat-naked-cake.html',
   '/bolos-pasta-americana': '/pages/bolos-pasta-americana.html',
   '/bolos-chantininho': '/pages/bolos-chantininho.html',
   '/caixa-bento-cake': '/pages/caixa-bento-cake.html',
   '/bolos-vulcao': '/pages/bolos-vulcao.html',
+  '/monte-seu-bolo': '/pages/monte-seu-bolo.html',
+  '/personalizados': '/pages/personalizados.html',
   '/salgados': '/pages/salgados.html'
 };
 
