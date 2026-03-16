@@ -184,6 +184,29 @@ a {
     box-shadow: 0 2px 15px rgba(127, 179, 174, 0.4);
 }
 
+.navbar-instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--creme);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.navbar-instagram:hover {
+    color: var(--gold-light);
+    transform: scale(1.1);
+}
+
+.navbar.navbar--scrolled .navbar-instagram {
+    color: var(--white);
+}
+
+.navbar.navbar--scrolled .navbar-instagram:hover {
+    color: var(--gold-light);
+}
+
 /* ============================================
    DROPDOWN CARDÁPIO
    ============================================ */
@@ -542,9 +565,30 @@ a {
 .hero-complemento {
     font-size: 0.9rem;
     color: var(--creme-dark);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     opacity: 0.9;
     animation: heroFadeUp 1s ease-out 0.3s both;
+}
+
+.hero-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    animation: heroFadeUp 1s ease-out 0.35s both;
+}
+
+.hero-instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--creme);
+    transition: var(--transition);
+}
+
+.hero-instagram:hover {
+    color: var(--gold-light);
+    transform: scale(1.15);
 }
 
 .hero-buttons {
@@ -1226,6 +1270,26 @@ a {
     max-width: 200px;
     height: auto;
     opacity: 0.9;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--creme-dark);
+    transition: var(--transition);
+}
+
+.footer-instagram:hover {
+    color: var(--gold-light);
+    transform: scale(1.1);
 }
 
 .footer-logo + p {
