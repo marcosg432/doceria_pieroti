@@ -49,6 +49,24 @@
     margin-bottom: 2rem;
 }
 
+/* Aviso sobre bolos acima de 3,5kg */
+.monte-bolo-aviso {
+    font-size: 0.9rem;
+    color: var(--text-muted, #5d4a3d);
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+.monte-bolo-aviso--resumo {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    background: rgba(127, 179, 174, 0.12);
+    border-radius: 10px;
+    font-style: normal;
+}
+
 .monte-bolo-grupo-titulo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.35rem;

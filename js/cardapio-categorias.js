@@ -59,7 +59,7 @@ const CARDAPIO_CATEGORIAS = {
         categorias: [
             {
                 nome: 'Monte seu bolo',
-                imagem: 'images/bolos-chantininho/bolo-01.webp',
+                imagem: 'images/monte-seu-bolo/monte-seu-bolo.png',
                 descricao: 'Monte seu bolo personalizado: massa, recheio, tamanho e cobertura.',
                 link: 'pages/monte-seu-bolo.html',
                 alt: 'Monte seu bolo'
@@ -100,6 +100,19 @@ const CARDAPIO_CATEGORIAS = {
                 alt: 'Bolo Vulcão'
             }
         ]
+    },
+    personalizados: {
+        titulo: 'Personalizados',
+        emoji: '🎁',
+        categorias: [
+            {
+                nome: 'Personalizados',
+                imagem: 'images/personalizados/doces-personalizados-01.webp',
+                descricao: 'Doces e bolos personalizados para sua data especial. Encomendas sob medida com todo o carinho.',
+                link: 'pages/personalizados.html',
+                alt: 'Doces personalizados'
+            }
+        ]
     }
 };
 
@@ -110,6 +123,7 @@ const CARDAPIO_CATEGORIAS = {
 function renderCardapioCategorias(options = {}) {
     const docesId = options.docesContainerId || 'cardapio-doces-grid';
     const bolosId = options.bolosContainerId || 'cardapio-bolos-grid';
+    const personalizadosId = options.personalizadosContainerId || 'cardapio-personalizados-grid';
 
     const renderGrupo = (grupo, containerId) => {
         const container = document.getElementById(containerId);
@@ -122,6 +136,7 @@ function renderCardapioCategorias(options = {}) {
             card.href = cat.link;
             card.className = 'cardapio-categoria-card';
             card.setAttribute('data-aos', '');
+            if (cat.nome === 'Pasta Americana') card.setAttribute('data-categoria', 'pasta-americana');
             card.innerHTML = `
                 <div class="cardapio-categoria-card-image">
                     <img src="${cat.imagem}" alt="${cat.alt}" loading="${i < 4 ? 'eager' : 'lazy'}" width="400" height="400">
@@ -138,6 +153,7 @@ function renderCardapioCategorias(options = {}) {
 
     renderGrupo(CARDAPIO_CATEGORIAS.doces, docesId);
     renderGrupo(CARDAPIO_CATEGORIAS.bolos, bolosId);
+    renderGrupo(CARDAPIO_CATEGORIAS.personalizados, personalizadosId);
 
     /* Inicializa animações nos cards dinâmicos (AOS) */
     const cards = document.querySelectorAll('.cardapio-categoria-card[data-aos]');

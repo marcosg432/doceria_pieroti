@@ -1,0 +1,292 @@
+/* ============================================
+   KITS PERSONALIZADOS
+   Cards premium para a página Personalizados
+   ============================================ */
+
+.kits-personalizados {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(58, 31, 20, 0.08);
+}
+
+.kits-personalizados-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--chocolate-dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Como fazer seu pedido (info aplica a todos os kits) --- */
+.kit-pedido-info {
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    padding: 2rem 2.25rem;
+    background: linear-gradient(145deg, #5a9aa8 0%, #7eb8c4 50%, #6baab8 100%);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(58, 31, 20, 0.12);
+    color: #fff;
+}
+
+.kit-pedido-info-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1.25rem 0;
+}
+
+.kit-pedido-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.kit-pedido-info-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.kit-pedido-info-icon--pix {
+    font-size: 1.1rem;
+}
+
+.kit-pedido-info-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.kit-pedido-info-link {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.kit-pedido-info-link:hover {
+    opacity: 0.9;
+}
+
+.kit-pedido-info-aviso {
+    margin: 1rem 0 0.75rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.kit-pedido-info-cancelamento {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.75rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.kit-pedido-info-cancelamento-icon {
+    flex-shrink: 0;
+    color: #e57373;
+    font-weight: 700;
+}
+
+.kits-personalizados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* --- Cards base --- */
+.kit-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 40px rgba(58, 31, 20, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.kit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(58, 31, 20, 0.15);
+}
+
+/* Gradientes por kit */
+.kit-card--bronze {
+    background: linear-gradient(145deg, #8B6914 0%, #B8860B 35%, #CD9B1D 60%, #8B6914 100%);
+}
+
+.kit-card--prata {
+    background: linear-gradient(145deg, #5a5a5a 0%, #808080 35%, #a8a8a8 60%, #6b6b6b 100%);
+}
+
+.kit-card--ouro {
+    background: linear-gradient(145deg, #9a7b2e 0%, #D4AF37 35%, #F4E4BC 55%, #c9a227 100%);
+}
+
+.kit-card--batizado {
+    background: linear-gradient(145deg, #5a9aa8 0%, #7eb8c4 40%, #9fd4de 70%, #5a9aa8 100%);
+}
+
+.kit-card-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.kit-card-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex: 1;
+}
+
+.kit-card-lista li {
+    position: relative;
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.98);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.kit-card-lista li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.kit-card-preco {
+    margin-top: auto;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kit-card-whatsapp {
+    align-self: center;
+    width: 100%;
+    max-width: 240px;
+    justify-content: center;
+}
+
+/* Animação fade-in / slide-up (reforço para data-aos) */
+.kit-card[data-aos] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.35s ease;
+}
+
+.kit-card[data-aos].aos-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.kit-card[data-aos].aos-visible:hover {
+    transform: translateY(-4px);
+}
+
+/* --- Responsivo --- */
+@media (max-width: 900px) {
+    .kits-personalizados-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .kits-personalizados {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+
+    .kits-personalizados-titulo {
+        font-size: 1.65rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .kit-pedido-info {
+        padding: 1.5rem 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .kit-pedido-info-titulo {
+        font-size: 1.35rem;
+    }
+
+    .kit-pedido-info-item p,
+    .kit-pedido-info-aviso,
+    .kit-pedido-info-cancelamento {
+        font-size: 0.9rem;
+    }
+
+    .kit-pedido-info-link {
+        word-break: break-all;
+    }
+
+    .kit-pedido-info {
+        padding: 1.5rem 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .kit-pedido-info-titulo {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .kit-pedido-info-item p,
+    .kit-pedido-info-aviso,
+    .kit-pedido-info-cancelamento {
+        font-size: 0.9rem;
+    }
+
+    .kit-pedido-info-link {
+        word-break: break-all;
+    }
+
+    .kit-card {
+        padding: 1.75rem;
+    }
+
+    .kit-card-titulo {
+        font-size: 1.6rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .kit-card-lista li {
+        font-size: 1rem;
+    }
+
+    .kit-card-preco {
+        font-size: 1.35rem;
+        padding: 0.9rem 1.25rem;
+    }
+
+    .kit-card-whatsapp {
+        max-width: 100%;
+        min-width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+    }
+}
