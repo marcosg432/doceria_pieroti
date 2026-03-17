@@ -783,10 +783,123 @@ a {
     grid-template-columns: repeat(4, 1fr);
 }
 
+/* Cardápio - Grupos (Doces / Bolos) */
+.cardapio-grupo {
+    margin-bottom: 3.5rem;
+}
+
+.cardapio-grupo:last-child {
+    margin-bottom: 0;
+}
+
+.cardapio-grupo-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--chocolate-dark);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cardapio-grupo-emoji {
+    font-size: 1.5rem;
+}
+
+.cardapio-categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
 .cardapio-categoria-card {
     text-decoration: none;
     color: inherit;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 30px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardapio-categoria-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px var(--shadow-strong);
+}
+
+.cardapio-categoria-card[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.cardapio-categoria-card[data-aos].aos-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cardapio-categoria-card:hover[data-aos].aos-visible {
+    transform: translateY(-6px);
+}
+
+.cardapio-categoria-card-image {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.cardapio-categoria-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.cardapio-categoria-card:hover .cardapio-categoria-card-image img {
+    transform: scale(1.05);
+}
+
+.cardapio-categoria-card-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cardapio-categoria-card-desc {
+    flex: 1;
+}
+
+.cardapio-categoria-card-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--chocolate-dark);
+    margin-bottom: 0.5rem;
+}
+
+.cardapio-categoria-card-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.cardapio-categoria-card-btn {
     display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    pointer-events: none;
+}
+
+.btn-sm {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
 }
 
 .cardapio-categoria-card .btn-categoria {
@@ -1484,6 +1597,11 @@ a {
     .cardapio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .cardapio-categorias-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1543,6 +1661,15 @@ a {
 
     .cardapio-grid--categorias {
         gap: 1.5rem;
+    }
+
+    .cardapio-categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .cardapio-grupo {
+        margin-bottom: 2.5rem;
     }
 
     .kit-card .kit-info {

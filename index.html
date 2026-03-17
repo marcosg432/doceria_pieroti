@@ -40,7 +40,7 @@
                 <div class="menu-cardapio" id="menu-bolos">
                     <a href="#bolos" class="navbar-link navbar-link--has-submenu" id="bolos-trigger">Bolos</a>
                     <ul class="submenu" id="submenu-bolos">
-                        <li><a href="pages/bolos-chantininho.html#monte-bolo" class="submenu-link">Monte seu bolo</a></li>
+                        <li><a href="pages/monte-seu-bolo.html" class="submenu-link">Monte seu bolo</a></li>
                         <li><a href="pages/bolos-kit-kat-naked-cake.html" class="submenu-link">Bolos cobertura Kit Kat e Naked Cake</a></li>
                         <li><a href="pages/bolos-pasta-americana.html" class="submenu-link">Bolos cobertura Pasta Americana</a></li>
                         <li><a href="pages/bolos-chantininho.html" class="submenu-link">Chantininho (cobertura de acetato)</a></li>
@@ -116,27 +116,17 @@
         <div class="container">
             <h2 class="section-title">Cardápio Completo</h2>
             <p class="section-subtitle">Catálogo com todas as delícias artesanais</p>
-            <div class="cardapio-grid cardapio-grid--categorias">
-                <a href="pages/doces.html" class="produto-card cardapio-categoria-card" data-aos>
-                    <div class="produto-image">
-                        <img src="images/bombons-tradicionais/bombom-tradicional-01.webp" alt="Doces artesanais" loading="eager" width="600" height="600">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Doces</h3>
-                        <p>Conheça nossos doces artesanais feitos com ingredientes selecionados.</p>
-                        <span class="btn btn-primary btn-full btn-categoria">Ver cardápio de doces</span>
-                    </div>
-                </a>
-                <a href="pages/bolos-kit-kat-naked-cake.html" class="produto-card cardapio-categoria-card" data-aos>
-                    <div class="produto-image">
-                        <img src="images/bolos-kit-kat-naked-cake/bolo-01.webp" alt="Bolos Kit Kat e Naked Cake" loading="lazy">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Bolos</h3>
-                        <p>Conheça nossos bolos artesanais com coberturas especiais e recheios irresistíveis.</p>
-                        <span class="btn btn-primary btn-full btn-categoria">Ver cardápio de bolos</span>
-                    </div>
-                </a>
+
+            <!-- Doces -->
+            <div class="cardapio-grupo">
+                <h3 class="cardapio-grupo-titulo"><span class="cardapio-grupo-emoji">🍫</span> Doces</h3>
+                <div class="cardapio-categorias-grid" id="cardapio-doces-grid"></div>
+            </div>
+
+            <!-- Bolos -->
+            <div class="cardapio-grupo">
+                <h3 class="cardapio-grupo-titulo"><span class="cardapio-grupo-emoji">🎂</span> Bolos</h3>
+                <div class="cardapio-categorias-grid" id="cardapio-bolos-grid"></div>
             </div>
         </div>
     </section>
@@ -253,6 +243,14 @@
         </div>
     </div>
 
+    <script src="js/cardapio-categorias.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderCardapioCategorias === 'function') {
+                renderCardapioCategorias();
+            }
+        });
+    </script>
 </body>
 </html>

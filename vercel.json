@@ -9,6 +9,7 @@
     { "source": "/bolos-kit-kat-naked-cake", "destination": "/pages/bolos-kit-kat-naked-cake.html" },
     { "source": "/bolos-pasta-americana", "destination": "/pages/bolos-pasta-americana.html" },
     { "source": "/bolos-chantininho", "destination": "/pages/bolos-chantininho.html" },
+    { "source": "/monte-seu-bolo", "destination": "/pages/monte-seu-bolo.html" },
     { "source": "/caixa-bento-cake", "destination": "/pages/caixa-bento-cake.html" },
     { "source": "/bolos-vulcao", "destination": "/pages/bolos-vulcao.html" },
     { "source": "/salgados", "destination": "/pages/salgados.html" }

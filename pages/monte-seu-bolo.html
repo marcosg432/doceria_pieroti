@@ -2,12 +2,165 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=bolos-chantininho.html#monte-bolo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Monte seu bolo | Confeitaria Pierotti Encomendas</title>
-    <script>location.replace('bolos-chantininho.html#monte-bolo');</script>
+    <meta name="description" content="Monte seu bolo personalizado. Escolha massa, recheio, tamanho e cobertura. Pedidos pelo WhatsApp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/doces.css">
+    <link rel="stylesheet" href="../css/monte-seu-bolo.css">
 </head>
-<body>
-    <p>Redirecionando para <a href="bolos-chantininho.html#monte-bolo">Monte seu bolo</a>...</p>
+<body class="page-monte-seu-bolo">
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo" aria-label="Confeitaria Pierotti Encomendas"><img src="../images/logo/logo.png" alt="Confeitaria Pierotti" class="navbar-logo-img"></a>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu">
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+            </button>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="/" class="navbar-link">Início</a>
+                <div class="menu-cardapio" id="menu-cardapio">
+                    <a href="/#cardapio" class="navbar-link navbar-link--has-submenu" id="cardapio-trigger">Doces</a>
+                    <ul class="submenu" id="submenu-cardapio">
+                        <li><a href="doces.html" class="submenu-link">Tradicionais</a></li>
+                        <li><a href="gourmet.html" class="submenu-link">Gourmet</a></li>
+                        <li><a href="bombons-tradicionais.html" class="submenu-link">Bombons Tradicionais</a></li>
+                        <li><a href="bombons-finos.html" class="submenu-link">Bombons Finos</a></li>
+                        <li><a href="bombons-gourmet.html" class="submenu-link">Bombons Gourmet</a></li>
+                        <li><a href="bem-casados.html" class="submenu-link">Bem Casados</a></li>
+                    </ul>
+                </div>
+                <div class="menu-cardapio" id="menu-bolos">
+                    <a href="/#bolos" class="navbar-link navbar-link--has-submenu" id="bolos-trigger">Bolos</a>
+                    <ul class="submenu" id="submenu-bolos">
+                        <li><a href="monte-seu-bolo.html" class="submenu-link submenu-link--active">Monte seu bolo</a></li>
+                        <li><a href="bolos-kit-kat-naked-cake.html" class="submenu-link">Bolos cobertura Kit Kat e Naked Cake</a></li>
+                        <li><a href="bolos-pasta-americana.html" class="submenu-link">Bolos cobertura Pasta Americana</a></li>
+                        <li><a href="bolos-chantininho.html" class="submenu-link">Chantininho (cobertura de acetato)</a></li>
+                        <li><a href="caixa-bento-cake.html" class="submenu-link">Caixa Bentô Cake</a></li>
+                        <li><a href="bolos-vulcao.html" class="submenu-link">Bolo Vulcão</a></li>
+                    </ul>
+                </div>
+                <a href="personalizados.html" class="navbar-link">Personalizados</a>
+                <a href="/#localizacao" class="navbar-link">Localização</a>
+                <a href="https://www.instagram.com/pierotti_confeitaria/" target="_blank" rel="noopener noreferrer" class="navbar-instagram" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.203.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="/#whatsapp" class="btn btn-primary btn-navbar" data-whatsapp>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Pedir no WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SEÇÃO MONTE SEU BOLO -->
+    <main class="doces-page monte-bolo-page">
+        <section class="monte-bolo-section doces-section" id="monte-bolo">
+            <div class="container">
+                <h1 class="section-title monte-bolo-section-title">Monte seu bolo</h1>
+                <p class="section-subtitle">Escolha cada detalhe e envie seu pedido pelo WhatsApp</p>
+                <div class="monte-bolo-layout">
+                    <div class="monte-bolo-opcoes">
+                        <div class="monte-bolo-grupo" data-grupo="massa">
+                            <h3 class="monte-bolo-grupo-titulo">1. Escolha a massa</h3>
+                            <div class="monte-bolo-buttons">
+                                <button type="button" class="monte-bolo-btn" data-opcao="massa" data-valor="Massa branca tradicional (pão de ló)">Massa branca tradicional (pão de ló)</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="massa" data-valor="Chocolate">Massa preta de chocolate</button>
+                            </div>
+                        </div>
+                        <div class="monte-bolo-grupo" data-grupo="recheio">
+                            <h3 class="monte-bolo-grupo-titulo">2. Escolha o recheio – Tradicionais <span class="monte-bolo-preco">(R$95/kg)</span></h3>
+                            <div class="monte-bolo-buttons">
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Brigadeiro com mousse de leite ninho">Brigadeiro com mousse de leite ninho</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Brigadeiro com coco (prestígio)">Brigadeiro com coco (prestígio)</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Brigadeiro de ninho com brigadeiro ao leite">Brigadeiro de ninho com brigadeiro ao leite</button>
+                            </div>
+                        </div>
+                        <div class="monte-bolo-grupo" data-grupo="recheio-gourmet">
+                            <h3 class="monte-bolo-grupo-titulo">Recheios Gourmet <span class="monte-bolo-preco">(R$110/kg)</span></h3>
+                            <div class="monte-bolo-buttons">
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Abacaxi com doce de leite">Abacaxi com doce de leite</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Ninho com Nutella">Ninho com Nutella</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Ganache com Ninho">Ganache com Ninho</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Ninho com geleia de morango">Ninho com geleia de morango</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="recheio" data-valor="Brigadeiro gourmet de maracujá">Brigadeiro gourmet de maracujá</button>
+                            </div>
+                        </div>
+                        <div class="monte-bolo-grupo" data-grupo="tamanho">
+                            <h3 class="monte-bolo-grupo-titulo">3. Escolha o tamanho do bolo</h3>
+                            <div class="monte-bolo-buttons">
+                                <button type="button" class="monte-bolo-btn" data-opcao="tamanho" data-valor="1kg">1kg</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="tamanho" data-valor="1.5kg">1.5kg</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="tamanho" data-valor="2kg">2kg</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="tamanho" data-valor="2.5kg">2.5kg</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="tamanho" data-valor="3kg">3kg</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="tamanho" data-valor="3.5kg">3.5kg</button>
+                            </div>
+                        </div>
+                        <div class="monte-bolo-grupo" data-grupo="cobertura">
+                            <h3 class="monte-bolo-grupo-titulo">4. Escolha a cobertura</h3>
+                            <div class="monte-bolo-buttons">
+                                <button type="button" class="monte-bolo-btn" data-opcao="cobertura" data-valor="Lascas de chocolate">Lascas de chocolate</button>
+                                <button type="button" class="monte-bolo-btn" data-opcao="cobertura" data-valor="Chantininho">Chantininho</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monte-bolo-resumo-col">
+                        <div class="monte-bolo-resumo-card" id="monte-bolo-resumo">
+                            <h3 class="monte-bolo-resumo-titulo">Resumo do pedido</h3>
+                            <div class="monte-bolo-resumo-conteudo" id="monte-bolo-resumo-conteudo">
+                                <p class="monte-bolo-resumo-vazio" id="monte-bolo-resumo-vazio">Selecione as opções acima para ver o resumo do seu bolo.</p>
+                                <ul class="monte-bolo-resumo-lista" id="monte-bolo-resumo-lista" style="display: none;"></ul>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-monte-bolo-whatsapp" id="monte-bolo-whatsapp" aria-label="Pedir no WhatsApp" style="display: none;">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                Pedir no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="../images/logo/logo.png" alt="Confeitaria Pierotti" class="footer-logo" width="140" height="56">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/pierotti_confeitaria/" target="_blank" rel="noopener noreferrer" class="footer-instagram" aria-label="Instagram da Confeitaria Pierotti">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.203.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+            <p>© 2025 Confeitaria Pierotti Encomendas. Feito com carinho.</p>
+        </div>
+    </footer>
+
+    <a href="#monte-bolo" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="24" height="24">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </a>
+
+    <a href="#whatsapp" class="whatsapp-float" data-whatsapp aria-label="Pedir pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/doces.js"></script>
+    <script src="../js/monte-seu-bolo.js"></script>
 </body>
 </html>
