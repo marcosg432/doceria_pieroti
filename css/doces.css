@@ -180,6 +180,17 @@
     color: var(--chocolate, #3d2319);
 }
 
+.tradicionais-decoracao-aviso {
+    margin: 1rem 0 0 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--text-muted, #5d4a3d);
+    font-weight: 500;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* --- Carrosséis (360x360px, proporção quadrada, tamanho médio) --- */
 .tradicionais-carousel-row {
     width: 360px;
@@ -646,6 +657,11 @@
 
 .page-bolos-chantininho .tradicionais-sabores-list .sabor-desc {
     font-size: 0.8em;
+}
+
+.page-bolos-chantininho .tradicionais-decoracao-aviso {
+    font-size: 0.88rem;
+    margin-top: 0.75rem;
 }
 
 @media (max-width: 900px) {
