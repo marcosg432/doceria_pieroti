@@ -14,7 +14,8 @@
         massa: null,
         recheio: null,
         tamanho: null,
-        cobertura: null
+        cobertura: null,
+        dataDesejada: null
     };
 
     function getWhatsAppUrl(message) {
@@ -25,6 +26,13 @@
         window.open(getWhatsAppUrl(message), '_blank', 'noopener,noreferrer');
     }
 
+    function formatDataBr(iso) {
+        if (!iso) return '';
+        const p = iso.split('-');
+        if (p.length !== 3) return iso;
+        return `${p[2]}/${p[1]}/${p[0]}`;
+    }
+
     function buildWhatsAppMessage() {
         if (!isPedidoCompleto()) return '';
         return [
@@ -33,12 +41,13 @@
             `Massa: ${pedido.massa}`,
             `Recheio: ${pedido.recheio}`,
             `Tamanho: ${pedido.tamanho}`,
-            `Cobertura: ${pedido.cobertura}`
+            `Cobertura: ${pedido.cobertura}`,
+            `Data de retirada: ${formatDataBr(pedido.dataDesejada)}`
         ].join('\n');
     }
 
     function isPedidoCompleto() {
-        return pedido.massa && pedido.recheio && pedido.tamanho && pedido.cobertura;
+        return pedido.massa && pedido.recheio && pedido.tamanho && pedido.cobertura && pedido.dataDesejada;
     }
 
     function buildResumoItems() {
@@ -47,6 +56,9 @@
         if (pedido.recheio) items.push({ label: 'Recheio', valor: pedido.recheio });
         if (pedido.tamanho) items.push({ label: 'Tamanho', valor: pedido.tamanho });
         if (pedido.cobertura) items.push({ label: 'Cobertura', valor: pedido.cobertura });
+        if (pedido.dataDesejada) {
+            items.push({ label: 'Data de retirada', valor: formatDataBr(pedido.dataDesejada) });
+        }
         return items;
     }
 
@@ -122,7 +134,7 @@
             const section = document.querySelector('.monte-bolo-section');
             const msg = section?.querySelector('.monte-bolo-resumo-vazio');
             if (msg) {
-                msg.textContent = 'Selecione todas as opções antes de enviar.';
+                msg.textContent = 'Preencha todas as opções e a data de retirada antes de enviar.';
                 msg.style.color = '#c0392b';
                 setTimeout(() => {
                     msg.textContent = 'Selecione as opções acima para ver o resumo do seu bolo.';
@@ -141,6 +153,16 @@
     function initMonteBolo() {
         const section = document.querySelector('.monte-bolo-section');
         if (!section) return;
+
+        const dataInput = section.querySelector('#monte-bolo-data');
+        if (dataInput) {
+            const hoje = new Date().toISOString().split('T')[0];
+            dataInput.min = hoje;
+            dataInput.addEventListener('change', () => {
+                pedido.dataDesejada = dataInput.value || null;
+                updateResumo();
+            });
+        }
 
         section.addEventListener('click', (e) => {
             if (e.target.closest('.monte-bolo-btn')) {
